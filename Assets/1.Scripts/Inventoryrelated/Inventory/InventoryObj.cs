@@ -63,6 +63,25 @@ public class InventoryObj : ScriptableObject
 
         return true;
     }
+    public bool UseItem(Item item, int amount)
+    {
+        InvenSlot invenSlot = seachItemInInven(item);
+        if (!itemDBObj.itemObjs[item.item_id].getFlagStackable || invenSlot == null)
+        {
+            if (getEmptySlotCnt <= 0)
+            {
+                return false;
+            }
+
+            getEmptySlot().uploadSlot(item, amount);
+        }
+        else
+        {
+            invenSlot.minusCnt(amount-1);
+        }
+
+        return true;
+    }
 
     public InvenSlot seachItemInInven(Item item)
     {

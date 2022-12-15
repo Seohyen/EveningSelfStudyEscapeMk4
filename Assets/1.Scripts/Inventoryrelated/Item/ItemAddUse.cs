@@ -27,8 +27,8 @@ public class ItemAddUse : MonoBehaviour
     {
         if (itemDBObj.itemObjs.Length > 0)
         {
-            ItemObj newItemObj = ItemPickup.instance.item;
 
+        ItemObj newItemObj = ItemPickup.instance.item;
             Item newItem = new Item(newItemObj);
             if (newItemObj != null)
             {
@@ -43,17 +43,20 @@ public class ItemAddUse : MonoBehaviour
         if (inventoryObj.invenSlots != null)
         {
             inventoryObj.invenSlots[0].itemCnt -= 1;
+            ItemObj newItemObj = ItemPickup.instance.item;
+            Item newItem = new Item(newItemObj);
             Debug.Log(inventoryObj.invenSlots[0].itemCnt);
-            invenSlot.slotUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = invenSlot.itemCnt.ToString("n0");
+            inventoryObj.UseItem(newItem,1);
 
             if (inventoryObj.invenSlots[0].itemCnt <= 0)
             {
-                Debug.Log("D");
                 inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;
             }
         }
 
     }
+
+    
 
 
 

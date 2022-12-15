@@ -16,6 +16,7 @@ public static class MouseTransformData
 [RequireComponent(typeof(EventTrigger))]
 public abstract class UIInventory : MonoBehaviour
 {
+
     public InventoryObj inventoryObj;
     private InventoryObj beforeInventoryObj;
 
@@ -51,7 +52,6 @@ public abstract class UIInventory : MonoBehaviour
 
         if (!eventTrigger)
         {
-           // Debug.LogWarning("Nothing Events!");
             return;
         }
 
