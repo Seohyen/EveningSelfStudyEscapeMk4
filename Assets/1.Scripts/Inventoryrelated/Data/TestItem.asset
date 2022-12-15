@@ -19,6 +19,10 @@ MonoBehaviour:
   itemData:
     item_id: 0
     item_name: TestITem
-    ability: []
+    ability:
+    - characterStack: 0
+      valStack: 2
+      min: 0
+      max: 0
   boneNameLists: []
   itemSummery: 
