@@ -15,8 +15,8 @@ public class FieldOfView_editor : Editor
 
         Handles.DrawWireArc(fov.transform.position, Vector3.up, Vector3.forward, 360, fov.eyeRadius);
 
-        Vector3 viewAngleA = fov.findTargetAngle(-fov.eyeAngle / 1, false);
-        Vector3 viewAngleB = fov.findTargetAngle(fov.eyeAngle / 1, false);
+        Vector3 viewAngleA = fov.findTargetAngle(-fov.eyeAngle / 2, false);
+        Vector3 viewAngleB = fov.findTargetAngle(fov.eyeAngle / 2, false);
 
         Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleA * fov.eyeRadius);
         Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleB * fov.eyeRadius);
