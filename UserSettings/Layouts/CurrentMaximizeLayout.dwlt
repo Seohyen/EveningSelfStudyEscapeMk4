@@ -191,7 +191,15 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 3086
+=======
+<<<<<<< HEAD
+  controlID: 751
+=======
+  controlID: 21
+>>>>>>> YuJeongBin
+>>>>>>> main
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +217,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 696.8
+=======
+    width: 621.6
+>>>>>>> YuJeongBin
     height: 383.2
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -240,7 +252,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
+<<<<<<< HEAD
     width: 695.8
+=======
+    width: 620.6
+>>>>>>> YuJeongBin
     height: 362.2
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -251,8 +267,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffset: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -262,9 +278,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: -141, y: -188.6}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -443,9 +459,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 112.40997, y: -1.2429284, z: 88.282295}
     speed: 2
     m_Value: {x: 112.40997, y: -1.2429284, z: 88.282295}
+=======
+    m_Target: {x: -3.4903467, y: 2.4925928, z: -2.7858336}
+    speed: 2
+    m_Value: {x: -3.4903467, y: 2.4925928, z: -2.7858336}
+>>>>>>> YuJeongBin
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -487,11 +509,12 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.23417865, y: -0.30523002, z: 0.07771841, w: 0.9197742}
     speed: 2
     m_Value: {x: 0.23417519, y: -0.30522552, z: 0.07771726, w: 0.9197606}
@@ -499,6 +522,15 @@ MonoBehaviour:
     m_Target: 9.189724
     speed: 2
     m_Value: 9.189724
+=======
+    m_Target: {x: 0.004075399, y: 0.2438346, z: -0.0010175478, w: 0.96983224}
+    speed: 2
+    m_Value: {x: 0.0040753023, y: 0.24382882, z: -0.0010175237, w: 0.96980923}
+  m_Size:
+    m_Target: 1.4361428
+    speed: 2
+    m_Value: 1.4361428
+>>>>>>> YuJeongBin
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -538,9 +570,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 696.8
     y: 0
     width: 176.79999
+=======
+    x: 621.6
+    y: 0
+    width: 252
+>>>>>>> YuJeongBin
     height: 383.2
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -569,9 +607,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 696.8
     y: 73.6
     width: 174.79999
+=======
+    x: 621.60004
+    y: 73.6
+    width: 250
+>>>>>>> YuJeongBin
     height: 362.2
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -580,9 +624,19 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: c85c0000
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 9cb4ffff5edfffff62f8ffff16fbffff
+=======
+      m_ExpandedIDs: 16fbffff4e5c00005a5c0000a25c0000
+=======
+      m_SelectedIDs: 02ff0100
+      m_LastClickedID: 130818
+      m_ExpandedIDs: c69cf5ff8e9dffff049fffffd0c6000028c90000
+>>>>>>> YuJeongBin
+>>>>>>> main
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -673,12 +727,17 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/1.Scripts/Inventoryrelated/Data
+=======
+    - Assets/1.Scripts/Teacher/Fov
+>>>>>>> YuJeongBin
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/1.Scripts/Inventoryrelated/Data
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Git\EveningSelfStudyEscapeMk4
@@ -689,6 +748,18 @@ MonoBehaviour:
     m_SelectedIDs: ac5d0000
     m_LastClickedID: 23980
     m_ExpandedIDs: 00000000725d0000745d0000905d000000ca9a3b
+=======
+  - Assets/1.Scripts/Teacher/Fov
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: C:\Unity\EveningSelfStudyEscapeMk4
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 2c780100
+    m_LastClickedID: 96300
+    m_ExpandedIDs: 00000000e8b90000eab900002878010000ca9a3b
+>>>>>>> YuJeongBin
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -716,7 +787,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000725d0000745d000000ca9a3b
+=======
+    m_ExpandedIDs: 
+>>>>>>> YuJeongBin
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -741,9 +816,18 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: c85c0000
     m_LastClickedInstanceID: 23752
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
+=======
+=======
+    m_SelectedInstanceIDs: 02ff0100
+    m_LastClickedInstanceID: 130818
+>>>>>>> YuJeongBin
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> main
     m_ExpandedInstanceIDs: c6230000405b000014490000d0460000983d0000fa3d00004849000056490000ea4b000042490000f04600000e47000014520000903d00007e4b0000784b0000aa40000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -816,8 +900,18 @@ MonoBehaviour:
     y: 0
     width: 456
     height: 347.59998
+<<<<<<< HEAD
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+<<<<<<< HEAD
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> YuJeongBin
+>>>>>>> main
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -969,7 +1063,11 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 20}
   m_Selected: 2
+<<<<<<< HEAD
   m_LastSelected: 0
+=======
+  m_LastSelected: 1
+>>>>>>> YuJeongBin
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52

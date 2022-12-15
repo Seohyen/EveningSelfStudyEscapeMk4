@@ -15,6 +15,8 @@ public class TeacherFSM_Behaviour : Teacher
         base.Start();
         fsmManager.AddStateList(new stateMove());
         fsmManager.AddStateList(new stateAtk());
+        fsmManager.AddStateList(new stateRoaming());
+        fsmManager.AddStateList(new stateIdle());
     }
 
     protected override void Update()
