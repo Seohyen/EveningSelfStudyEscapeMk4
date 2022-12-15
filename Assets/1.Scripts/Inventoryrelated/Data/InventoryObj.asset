@@ -21,7 +21,7 @@ MonoBehaviour:
         item_id: 0
         item_name: TestItem
         ability: []
-      itemCnt: -1
+      itemCnt: 0
     - itemTypes: 
       item:
         item_id: -1

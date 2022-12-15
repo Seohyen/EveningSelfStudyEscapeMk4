@@ -42,9 +42,12 @@ public class ItemAddUse : MonoBehaviour
 
         if (inventoryObj.invenSlots != null)
         {
-            inventoryObj.invenSlots[0].itemCnt = -1;
+            inventoryObj.invenSlots[0].itemCnt -= 1;
+            Debug.Log(inventoryObj.invenSlots[0].itemCnt);
+
             if (inventoryObj.invenSlots[0].itemCnt <= 0)
             {
+                Debug.Log("D");
                 inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;
             }
         }
