@@ -44,6 +44,7 @@ public class ItemAddUse : MonoBehaviour
         {
             inventoryObj.invenSlots[0].itemCnt -= 1;
             Debug.Log(inventoryObj.invenSlots[0].itemCnt);
+            invenSlot.slotUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = invenSlot.itemCnt.ToString("n0");
 
             if (inventoryObj.invenSlots[0].itemCnt <= 0)
             {
