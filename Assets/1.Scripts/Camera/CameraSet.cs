@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraSet : MonoBehaviour
 {
-    
+
     [Header("카메라 기본속성")]
     private Transform cameraTransform = null;
 
@@ -13,11 +13,11 @@ public class CameraSet : MonoBehaviour
     private Transform objTargetTransform = null;
 
     Vector3 originPos;
-    public enum CameraTypeState { First,  Third }
+    public enum CameraTypeState { First, Third }
 
     public CameraTypeState cameraTypeState = CameraTypeState.Third;
 
-   
+
 
     [Header("1인칭 카메라")]
     public float detailX = 3.0f;
@@ -53,7 +53,7 @@ public class CameraSet : MonoBehaviour
         {
             Vector3 randomPoint = originPosition + Random.insideUnitSphere * shakeAmount;
             cam.localPosition = Vector3.Lerp(cam.localPosition, randomPoint, Time.deltaTime * shakeSpeed);
-            
+
             yield return null;
 
             elapsedTime += Time.deltaTime;
@@ -68,17 +68,16 @@ public class CameraSet : MonoBehaviour
         rotationX = (rotationX > 180.0f) ? rotationX - 360.0f : rotationX;
 
         rotationY = rotationY + mouseY * detailY;
-        //y축 제한
-       rotationY = Mathf.Clamp(rotationY + mouseY, -45, 80);
+        rotationY = Mathf.Clamp(rotationY + mouseY, -45, 80);
         rotationY = (rotationY > 180.0f) ? rotationY - 360.0f : rotationY;
 
         cameraTransform.localEulerAngles = new Vector3(-rotationY, rotationX, 0f);
-    
+
         cameraTransform.position = posfirstCameraTarget.position;
     }
     private void LateUpdate()
     {
-     
+
         if (objTarget == null)
         {
             return;
@@ -99,7 +98,7 @@ public class CameraSet : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q))
         {
             StartCoroutine(Shake());
         }

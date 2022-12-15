@@ -45,7 +45,7 @@ public class ItemAddUse : MonoBehaviour
             inventoryObj.invenSlots[0].itemCnt = -1;
             if (inventoryObj.invenSlots[0].itemCnt <= 0)
             {
-            inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;
+                inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;
             }
         }
 

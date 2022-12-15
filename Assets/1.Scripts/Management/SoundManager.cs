@@ -76,6 +76,6 @@ public class SoundManager : MonoBehaviour
     public void WalkSoundStop()
     {
         audioWalkSource.Stop();
-    }    
+    }
 
 }

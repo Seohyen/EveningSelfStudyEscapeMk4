@@ -51,7 +51,7 @@ public abstract class UIInventory : MonoBehaviour
 
         if (!eventTrigger)
         {
-            Debug.LogWarning("Nothing Events!");
+           // Debug.LogWarning("Nothing Events!");
             return;
         }
 

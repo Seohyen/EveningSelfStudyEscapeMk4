@@ -185,6 +185,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             mainCamera.fieldOfView -= 13;
+
+        }
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
             stamina -= 2 * Time.deltaTime;
             if (stamina > 0)
             {
@@ -200,6 +204,7 @@ public class Player : MonoBehaviour
             }
 
         }
+
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             mainCamera.fieldOfView += 13;
