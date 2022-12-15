@@ -197,11 +197,11 @@ public class Player : MonoBehaviour
             else if (stamina <= 0)
             {
                 stamina = 0;
-            }
-            else
-            {
                 spd = 3;
             }
+           
+            
+            
 
         }
 
