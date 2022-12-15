@@ -43,7 +43,6 @@ public class ItemAddUse : MonoBehaviour
         if (inventoryObj.invenSlots != null)
         {
             inventoryObj.invenSlots[0].itemCnt = -1;
-            //invenSlot.slotUI.GetComponentInChildren<TextMeshProUGUI>().text = invenSlot.item.item_id < 0 ? string.Empty : (invenSlot.itemCnt == 1 ? string.Empty : invenSlot.itemCnt.ToString("n0"));
             if (inventoryObj.invenSlots[0].itemCnt <= 0)
             {
             inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;

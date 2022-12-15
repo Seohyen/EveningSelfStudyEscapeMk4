@@ -94,19 +94,6 @@ public class InventoryObj : ScriptableObject
         }
     }
 
-    public void Clear()
-    {
-        inventory.Clear();
-    }
-
-
-    public void IsAddItem(GameObject item)
-    {
-        item = Player.Instace.nowItem;
-
-            
-    }
-
 
 
     }

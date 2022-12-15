@@ -25,9 +25,7 @@ public class DynamicUIInventory : UIInventory
     [SerializeField]
     protected int numCols = 4;
 
-    private void Update()
-    {
-    }
+  
     public override void createUISlots()
     {
         uiSlotLists = new Dictionary<GameObject, InvenSlot>();
