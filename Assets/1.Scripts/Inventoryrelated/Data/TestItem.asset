@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e292234d0b81047889a641ad53de10, type: 3}
+  m_Name: TestItem
+  m_EditorClassIdentifier: 
+  itemType: 0
+  getFlagStackable: 1
+  itemIcon: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+  objModelPrefab: {fileID: 3023045240664113187, guid: 5bf3cc030573ef74c9add07912402709, type: 3}
+  itemData:
+    item_id: 0
+    item_name: TestITem
+    ability: []
+  boneNameLists: []
+  itemSummery: 

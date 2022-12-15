@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fe777f0ec4ad7c44aa3786937ed7c37d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioBGMSource: {instanceID: 0}
+  - audioSFXSource: {instanceID: 0}
+  - audioClickSource: {instanceID: 0}
+  - audioPhoneUISource: {instanceID: 0}
+  - clickClip: {instanceID: 0}
+  - bgmClip: {fileID: 8300000, guid: dfbaa6e6e7fd1c34387bd6f5e90cca1a, type: 3}
+  - waterClikClip: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
