@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.F))
                     {
                         nowItem = hit.collider.gameObject;
-                        ItemAdd.Instace.AddNewItem();
+                        ItemAddUse.Instace.AddNewItem();
                         Destroy(hit.transform.gameObject);
                     }
                 }
@@ -230,9 +230,9 @@ public class Player : MonoBehaviour
 
     private void UseItem()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-        ItemAdd.Instace.Clear();
+        ItemAddUse.Instace.Clear();
         }
     }
 

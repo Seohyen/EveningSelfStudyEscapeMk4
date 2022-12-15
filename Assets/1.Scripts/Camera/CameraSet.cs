@@ -47,7 +47,6 @@ public class CameraSet : MonoBehaviour
     }
     public IEnumerator Shake()
     {
-        Debug.Log("d");
         Vector3 originPosition = cam.localPosition;
         float elapsedTime = 0;
         while (elapsedTime < shakeTime)
