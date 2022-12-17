@@ -237,8 +237,14 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-        ItemAddUse.Instace.Clear();
+        ItemAddUse.Instace.Clear1(0);
         }
+        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ItemAddUse.Instace.Clear1(1);
+            Debug.Log("d");
+        }
+        
     }
 
     private void SpaceEvent()

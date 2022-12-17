@@ -37,24 +37,24 @@ public class ItemAddUse : MonoBehaviour
         }
     }
 
-    public void Clear()
+    public void Clear1(int value)
     {
         if (inventoryObj.invenSlots != null)
         {
-            inventoryObj.invenSlots[0].itemCnt -= 1;
+            inventoryObj.invenSlots[value].itemCnt -= 1;
             ItemObj newItemObj = ItemPickup.instance.item;
             Item newItem = new Item(newItemObj);
 
             inventoryObj.UseItem(newItem, 1);
 
-            if (inventoryObj.invenSlots[0].itemCnt <= 0)
+            if (inventoryObj.invenSlots[value].itemCnt <= 0)
             {
-                inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;
+                inventoryObj.invenSlots[value].slotUI.transform.GetChild(value).GetComponent<Image>().sprite = null;
             }
         }
     }
 
-
+   
 
 }
 

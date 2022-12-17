@@ -20,23 +20,15 @@ MonoBehaviour:
       item:
         item_id: 0
         item_name: TestItem
-        ability: []
-      itemCnt: 10
+        ability:
+        - characterStack: 0
+          valStack: 0
+          min: 0
+          max: 0
+      itemCnt: 7
     - itemTypes: 
       item:
-        item_id: -1
-        item_name: 
+        item_id: 1
+        item_name: TestItem2
         ability: []
-      itemCnt: 0
-    - itemTypes: 
-      item:
-        item_id: -1
-        item_name: 
-        ability: []
-      itemCnt: 0
-    - itemTypes: 
-      item:
-        item_id: -1
-        item_name: 
-        ability: []
-      itemCnt: 0
+      itemCnt: 17
