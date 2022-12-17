@@ -52,9 +52,12 @@ public class ItemAddUse : MonoBehaviour
                 inventoryObj.invenSlots[value].slotUI.transform.GetChild(value).GetComponent<Image>().sprite = null;
             }
         }
+            if(inventoryObj.invenSlots[value].itemCnt == 0)
+            {
+                return;
+            }
     }
 
-   
 
 }
 
