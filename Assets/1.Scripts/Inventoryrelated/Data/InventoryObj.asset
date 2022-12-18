@@ -18,16 +18,20 @@ MonoBehaviour:
     InvenSlots:
     - itemTypes: 
       item:
-        item_id: -1
+        item_id: 1
         item_name: 
         ability: []
-      itemCnt: 0
+      itemCnt: -6
     - itemTypes: 
       item:
-        item_id: -1
-        item_name: 
-        ability: []
-      itemCnt: -15
+        item_id: 0
+        item_name: TestItem
+        ability:
+        - characterStack: 0
+          valStack: 0
+          min: 0
+          max: 0
+      itemCnt: 1
     - itemTypes: 
       item:
         item_id: -1

@@ -11,5 +11,8 @@ public class ItemPickup : MonoBehaviour
         instance = this;
     }
     public ItemObj item;
-
+    public void Debuglog()
+    {
+        Debug.Log(item.name); 
+    }
 }
