@@ -11,6 +11,9 @@ public class Teacher : MonoBehaviour
     protected Animator animator;
 
     private FieldOfView fov;
+
+    private SoundManager soundManager;
+
     public Transform target => fov?.FirstTarget;
     public float atkRange = 0;
 
@@ -28,6 +31,7 @@ public class Teacher : MonoBehaviour
         fsmManager.AddStateList(stateIdle);
         
         fov = GetComponent<FieldOfView>();
+        soundManager = GetComponent<SoundManager>();
     }
 
     protected virtual void Update()
