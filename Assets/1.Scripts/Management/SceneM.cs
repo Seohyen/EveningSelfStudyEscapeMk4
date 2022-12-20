@@ -25,6 +25,8 @@ public class SceneM : MonoBehaviour
     }
     #endregion
 
+    [SerializeField]
+    private string scenename;
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);

@@ -28,7 +28,7 @@ public class ItemAddUse : MonoBehaviour
         if (itemDBObj.itemObjs.Length > 0)
         {
 
-            ItemObj newItemObj = ItemPickup.instance.item;
+            ItemObj newItemObj = Player.Instace.nowItem;
             Item newItem = new Item(newItemObj);
             if (newItemObj != null)
             {
@@ -37,20 +37,25 @@ public class ItemAddUse : MonoBehaviour
         }
     }
 
-    public void Clear()
+
+    public void Clear(int value)
     {
         if (inventoryObj.invenSlots != null)
         {
-            inventoryObj.invenSlots[0].itemCnt -= 1;
-            ItemObj newItemObj = ItemPickup.instance.item;
-            Item newItem = new Item(newItemObj);
+            inventoryObj.invenSlots[value].itemCnt -= 1;
+
+            Item newItem = inventoryObj.invenSlots[value].item;
 
             inventoryObj.UseItem(newItem, 1);
-
-            if (inventoryObj.invenSlots[0].itemCnt <= 0)
+            ItemPickup.instance.Debuglog();
+            if (inventoryObj.invenSlots[value].itemCnt <= 0)
             {
-                inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;
+                inventoryObj.invenSlots[value].slotUI.transform.GetChild(value).GetComponent<Image>().sprite = null;
             }
+        }
+        if (inventoryObj.invenSlots[value].itemCnt == 0)
+        {
+            return;
         }
     }
 

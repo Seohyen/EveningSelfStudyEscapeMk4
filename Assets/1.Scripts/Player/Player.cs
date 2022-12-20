@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
     RaycastHit hit;
     public bool isItem = false;
     public LayerMask layerMask;
-    public GameObject nowItem;
+    public ItemObj nowItem;
 
     private bool isHolding = false;
 
@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
                     rayText.gameObject.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
-                        nowItem = hit.collider.gameObject;
+                        nowItem = hit.collider.gameObject.GetComponent<ItemPickup>().item;
                         ItemAddUse.Instace.AddNewItem();
                         Destroy(hit.transform.gameObject);
                     }
@@ -237,8 +237,21 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-        ItemAddUse.Instace.Clear();
+        ItemAddUse.Instace.Clear(0);
         }
+        if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ItemAddUse.Instace.Clear(1);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            ItemAddUse.Instace.Clear(2);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            ItemAddUse.Instace.Clear(3);
+        }
+        
     }
 
     private void SpaceEvent()
