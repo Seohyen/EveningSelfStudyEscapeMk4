@@ -7,15 +7,11 @@ public class stateRoaming : State<Teacher>
     private CharacterController controller;
     private NavMeshAgent agent;
 
-    private Teacher teacher;
-
     public override void OnAwake()
     {
         animator = stateMachineClass.GetComponent<Animator>();
         controller = stateMachineClass.GetComponent<CharacterController>();
         agent = stateMachineClass.GetComponent<NavMeshAgent>();
-
-        teacher = stateMachineClass as Teacher;
     }
     public override void OnStart()
     {
@@ -32,7 +28,6 @@ public class stateRoaming : State<Teacher>
             animator?.SetBool("IsWalk", true);
             agent.speed = 3.0f;
         }
-
     }
     public override void OnUpdate(float deltaTime)
     {
@@ -62,10 +57,10 @@ public class stateRoaming : State<Teacher>
             else
             {
                 controller.Move(agent.velocity * Time.deltaTime);
-
             }
         }
     }
+
     public override void OnEnd()
     {
         animator?.SetBool("IsWalk", false);

@@ -23,6 +23,8 @@ public class FieldOfView : MonoBehaviour
     public Transform FirstTarget => firstTarget;
     public float DistanceTarget => distanceTarget;
 
+    public AudioSource audioSource;
+
     void FindTargets()
     {
         distanceTarget = 0.0f;

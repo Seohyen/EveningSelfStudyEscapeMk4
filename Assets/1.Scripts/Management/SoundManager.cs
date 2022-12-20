@@ -37,7 +37,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        AudioSource audioWalkSource = gameObject.AddComponent<AudioSource>();
+        audioWalkSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void SFXPlay(AudioClip clip)
@@ -69,13 +69,18 @@ public class SoundManager : MonoBehaviour
         audioSFXSource.Play();
     }
 
+    public void Update()
+    {
+        WalkSoundPlay();
+    }
+
     public void WalkSoundPlay()
     {
+        Debug.Log("WalkSoundPlay!");
         audioWalkSource.Play();
     }
     public void WalkSoundStop()
     {
         audioWalkSource.Stop();
     }
-
 }
