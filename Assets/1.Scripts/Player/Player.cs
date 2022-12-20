@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     }
     #endregion
     [SerializeField]
-    private float spd = 3;
+    private int spd = 3;
     public float stamina = 5;
     Rigidbody rigid;
 
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 
     public Text rayText;
 
-
+    
 
     RaycastHit hit;
     public bool isItem = false;
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
 
     private bool isHolding = false;
 
-
+   
     void Start()
     {
         sapceEvent.gameObject.SetActive(false);
@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
         VecDirectionChangeBody();
         SpaceEvent();
         UseItem();
+       
     }
 
     void Move()
@@ -108,10 +109,12 @@ public class Player : MonoBehaviour
             float vertical = Input.GetAxis("Vertical");
             float horizontal = Input.GetAxis("Horizontal");
 
+            
+
             Vector3 targetDirection = horizontal * right + vertical * forward;
             vecMoveDirection = Vector3.RotateTowards(vecMoveDirection, targetDirection, rotateMoveSpd * Mathf.Deg2Rad * Time.deltaTime, 1000.0f);
             vecMoveDirection = vecMoveDirection.normalized;
-            float walkSpd = spd;
+            int walkSpd = spd;
 
             Vector3 moveAmount = (vecMoveDirection * walkSpd * Time.deltaTime);
             collisionFlagsCharacter = controllerCharacter.Move(moveAmount);
@@ -177,54 +180,18 @@ public class Player : MonoBehaviour
                 rayText.gameObject.SetActive(false);
                 isItem = false;
             }
-        }
-    }
 
-    private void OnRun()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            mainCamera.fieldOfView -= 13;
-
-        }
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            stamina -= 2 * Time.deltaTime;
-            if (stamina > 0)
-            {
-                spd = 6;
-            }
-            else if (stamina <= 0)
-            {
-                stamina = 0;
-                spd = 3;
-            }
-           
-            
             
 
         }
-
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            mainCamera.fieldOfView += 13;
-            spd = 3;
-        }
-
-        if (stamina < 5)
-        {
-            if (!Input.GetKey(KeyCode.LeftShift))
-                stamina += 3 * Time.deltaTime;
-
-        }
-
     }
 
+    
 
     private void OnTriggerEnter(Collider col)
     {
 
-        if (col.gameObject.CompareTag("Enemy"))
+        if (col.gameObject.CompareTag("Teacher"))
         {
             isHolding = true;
             sapceEvent.gameObject.SetActive(true);
@@ -283,8 +250,48 @@ public class Player : MonoBehaviour
             }
         }
     }
+    private void OnRun()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            mainCamera.fieldOfView -= 13;
+            SoundManager.instance.RunSoundPlay();
+
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            stamina -= 2 * Time.deltaTime;
+            if (stamina > 0)
+            {
+                spd = 6;
+            }
+            else if (stamina <= 0)
+            {
+                stamina = 0;
+                spd = 3;
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            mainCamera.fieldOfView += 13;
+            SoundManager.instance.RunSoundStop();
+            spd = 3;
+        }
+        if (stamina < 5)
+        {
+            if (!Input.GetKey(KeyCode.LeftShift))
+                stamina += 3 * Time.deltaTime;
+        }
+
+    }
+
+    private void InputKey()
+    {
+
+    }
+     
+        
+    }
 
 
-
-}
 
