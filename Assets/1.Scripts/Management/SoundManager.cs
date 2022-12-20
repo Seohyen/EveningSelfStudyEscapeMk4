@@ -5,18 +5,18 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     #region
-    public static SoundManager _Instance = null;
+    public static SoundManager instance = null;
 
     public static SoundManager GetInstace()
     {
-        return _Instance;
+        return instance;
     }
 
     private void Awake()
     {
-        if (_Instance == null)
+        if (instance == null)
         {
-            _Instance = this;
+            instance = this;
         }
         else
         {
@@ -34,16 +34,21 @@ public class SoundManager : MonoBehaviour
     private AudioSource audioClickSource;
     [SerializeField]
     private AudioSource audioWalkSource;
-
+    [SerializeField]
+    private AudioSource audioRunSource;
+    [SerializeField]
+    private AudioSource audioDoorSource; 
     private void Start()
     {
-        audioWalkSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void SFXPlay(AudioClip clip)
+    public void SFXPlay(AudioSource source)
+    {
+        audioSFXSource.Play();
+    }
+    public void SFXStop()
     {
         audioSFXSource.Stop();
-        audioSFXSource.PlayOneShot(clip);
     }
 
     // BGM
@@ -71,12 +76,30 @@ public class SoundManager : MonoBehaviour
 
     public void Update()
     {
-        WalkSoundPlay();
     }
 
+    public void DoorSoundPlay()
+    {
+        audioDoorSource.Play();
+    }
+    
+    public void DoorSoundStop()
+    {
+        audioDoorSource.Stop();
+    }
+
+    public void RunSoundPlay()
+    {
+
+        audioRunSource.Play();
+    }
+    public void RunSoundStop()
+    {
+        audioRunSource.Stop();
+    }
     public void WalkSoundPlay()
     {
-        Debug.Log("WalkSoundPlay!");
+
         audioWalkSource.Play();
     }
     public void WalkSoundStop()
