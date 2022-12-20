@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
         VecDirectionChangeBody();
         SpaceEvent();
         UseItem();
+        Sound();
        
     }
 
@@ -119,6 +120,7 @@ public class Player : MonoBehaviour
             Vector3 moveAmount = (vecMoveDirection * walkSpd * Time.deltaTime);
             collisionFlagsCharacter = controllerCharacter.Move(moveAmount);
 
+            
 
             if (controllerCharacter.isGrounded == false)
             {
@@ -271,6 +273,7 @@ public class Player : MonoBehaviour
                 spd = 3;
             }
         }
+        
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             mainCamera.fieldOfView += 13;
@@ -285,9 +288,16 @@ public class Player : MonoBehaviour
 
     }
 
-    private void InputKey()
+    private void Sound()
     {
-
+        if (Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.D))
+        {
+            SoundManager.instance.WalkSoundPlay();
+        }
+        if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            SoundManager.instance.WalkSoundStop();
+        }
     }
      
         
