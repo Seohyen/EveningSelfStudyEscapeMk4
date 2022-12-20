@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
     RaycastHit hit;
     public bool isItem = false;
     public LayerMask layerMask;
-    public GameObject nowItem;
+    public ItemObj nowItem;
 
     private bool isHolding = false;
 
@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
                     rayText.gameObject.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
-                        nowItem = hit.collider.gameObject;
+                        nowItem = hit.collider.gameObject.GetComponent<ItemPickup>().item;
                         ItemAddUse.Instace.AddNewItem();
                         Destroy(hit.transform.gameObject);
                     }

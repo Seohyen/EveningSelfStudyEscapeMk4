@@ -28,7 +28,7 @@ public class ItemAddUse : MonoBehaviour
         if (itemDBObj.itemObjs.Length > 0)
         {
 
-            ItemObj newItemObj = ItemPickup.instance.item;
+            ItemObj newItemObj = Player.Instace.nowItem;
             Item newItem = new Item(newItemObj);
             if (newItemObj != null)
             {
@@ -42,7 +42,7 @@ public class ItemAddUse : MonoBehaviour
         if (inventoryObj.invenSlots != null)
         {
             inventoryObj.invenSlots[value].itemCnt -= 1;
-            ItemObj newItemObj = ItemPickup.instance.item;
+            ItemObj newItemObj = Player.Instace.nowItem;
             Item newItem = new Item(newItemObj);
 
             inventoryObj.UseItem(newItem, 1);
