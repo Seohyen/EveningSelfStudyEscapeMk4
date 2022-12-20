@@ -38,7 +38,7 @@ public class ItemAddUse : MonoBehaviour
     }
 
 
-    public void Clear1(int value)
+    public void Clear(int value)
     {
         if (inventoryObj.invenSlots != null)
         {

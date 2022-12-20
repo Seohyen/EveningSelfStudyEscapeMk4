@@ -5,16 +5,28 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    public int spd; 
+    public float spd;
 
+    Rigidbody rb;
+    Animator anim;
+
+    bool isWalk = true;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+    }
     private void Update()
     {
 
-        Vector3 moveMent = new Vector3(0,0,2 *Time.deltaTime);
-
-                
+        Invoke("MoveT", 8);
     }
 
+    private void MoveT()
+    {
+        rb.AddForce(Vector3.back * spd);
 
+       
+    }
 
 }

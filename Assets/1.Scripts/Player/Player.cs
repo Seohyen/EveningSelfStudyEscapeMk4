@@ -237,19 +237,19 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-        ItemAddUse.Instace.Clear1(0);
+        ItemAddUse.Instace.Clear(0);
         }
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            ItemAddUse.Instace.Clear1(1);
+            ItemAddUse.Instace.Clear(1);
         }
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
-            ItemAddUse.Instace.Clear1(2);
+            ItemAddUse.Instace.Clear(2);
         }
         if(Input.GetKeyDown(KeyCode.Alpha4))
         {
-            ItemAddUse.Instace.Clear1(3);
+            ItemAddUse.Instace.Clear(3);
         }
         
     }
