@@ -37,25 +37,47 @@ public class ItemAddUse : MonoBehaviour
         }
     }
 
-    public void Clear1(int value)
+    public void Clear1()
     {
         if (inventoryObj.invenSlots != null)
         {
-            inventoryObj.invenSlots[value].itemCnt -= 1;
+            inventoryObj.invenSlots[0].itemCnt -= 1;
             ItemObj newItemObj = Player.Instace.nowItem;
             Item newItem = new Item(newItemObj);
 
             inventoryObj.UseItem(newItem, 1);
             ItemPickup.instance.Debuglog();
-            if (inventoryObj.invenSlots[value].itemCnt <= 0)
+            if (inventoryObj.invenSlots[0].itemCnt <= 0)
             {
-                inventoryObj.invenSlots[value].slotUI.transform.GetChild(value).GetComponent<Image>().sprite = null;
+                inventoryObj.invenSlots[0].slotUI.transform.GetChild(0).GetComponent<Image>().sprite = null;
             }
         }
-            if(inventoryObj.invenSlots[value].itemCnt == 0)
+        if (inventoryObj.invenSlots[0].itemCnt == 0)
+        {
+            return;
+        }
+    }
+
+    public void Clear2()
+    {
+        if (inventoryObj.invenSlots != null)
+        {
+            inventoryObj.invenSlots[1].itemCnt -= 1;
+            ItemObj newItemObj = Player.Instace.nowItem;
+            Item newItem = new Item(newItemObj);
+
+            inventoryObj.UseItem(newItem, 1);
+            if(inventoryObj.invenSlots[1].itemCnt <= 0)
             {
+                inventoryObj.invenSlots[1].slotUI.transform.GetChild(1).GetComponent<Image>().sprite = null;
+            }
+            if(inventoryObj.invenSlots[1].itemCnt == 0)
+            {
+
                 return;
             }
+        }
+
     }
 
 
