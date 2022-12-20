@@ -36,7 +36,8 @@ public class SoundManager : MonoBehaviour
     private AudioSource audioWalkSource;
     [SerializeField]
     private AudioSource audioRunSource;
-
+    [SerializeField]
+    private AudioSource audioDoorSource; 
     private void Start()
     {
     }
@@ -77,7 +78,16 @@ public class SoundManager : MonoBehaviour
     {
     }
 
+    public void DoorSoundPlay()
+    {
+        audioDoorSource.Play();
+    }
     
+    public void DoorSoundStop()
+    {
+        audioDoorSource.Stop();
+    }
+
     public void RunSoundPlay()
     {
 
