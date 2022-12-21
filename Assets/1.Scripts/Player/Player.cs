@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int spd = 3;
     public float stamina = 5;
-    Rigidbody rigid;
 
 
     [SerializeField]

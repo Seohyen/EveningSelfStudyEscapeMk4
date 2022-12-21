@@ -12,14 +12,14 @@ public class Teacher : MonoBehaviour
 
     private FieldOfView fov;
 
-    private SoundManager soundManager;
-
     public Transform target => fov?.FirstTarget;
     public float atkRange = 0;
 
     public Transform[] posRoamingLists;
     public Transform posRoaming = null;
-    private int posRoamingListIdx = 0;
+    //private int posRoamingListIdx = 0;
+
+    private int roamingPos;
 
     protected virtual void Start()
     {
@@ -31,7 +31,6 @@ public class Teacher : MonoBehaviour
         fsmManager.AddStateList(stateIdle);
         
         fov = GetComponent<FieldOfView>();
-        soundManager = GetComponent<SoundManager>();
     }
 
     protected virtual void Update()
@@ -50,8 +49,9 @@ public class Teacher : MonoBehaviour
 
         if (posRoamingLists.Length > 0)
         {
-            posRoaming = posRoamingLists[posRoamingListIdx];
-            posRoamingListIdx = (posRoamingListIdx + 1) % posRoamingLists.Length;
+            roamingPos = Random.Range(0, posRoamingLists.Length);
+            posRoaming = posRoamingLists[roamingPos];
+            //posRoamingListIdx = (posRoamingListIdx + 1) % posRoamingLists.Length;
         }
 
         return posRoaming;
