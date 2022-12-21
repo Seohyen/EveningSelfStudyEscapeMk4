@@ -17,9 +17,9 @@ public class CreateItem : MonoBehaviour
     private void Start()
     {
         CreateItem1();
-        CreateItem2();
-        CreateItem3();
-        CreateItem4();
+        //CreateItem2();
+        //CreateItem3();
+        //CreateItem4();
     }
 
     private void CreateItem1()
@@ -27,8 +27,11 @@ public class CreateItem : MonoBehaviour
          int selection = Random.Range(0, ItemObj1.Length);
         GameObject selectedPrefab = ItemObj1[selection];
 
-        for(int i =0; i< Random.Range(1, 3); i++)
+        int count = Random.Range(2, 4);
+        int ct = count;
+        for (int i = 0; i < ct; i++)
         {
+            Debug.LogWarning(count);
         selectedPrefab.SetActive(true);
         }
     }
@@ -37,7 +40,7 @@ public class CreateItem : MonoBehaviour
         int selection = Random.Range(0, ItemObj2.Length);
         GameObject selectedPrefab = ItemObj2[selection];
 
-        for (int i = 0; i < Random.Range(1, 3); i++)
+        for (int i = 0; i < Random.Range(1, 3); ++i)
         {
             selectedPrefab.SetActive(true);
         }

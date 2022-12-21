@@ -18,25 +18,25 @@ MonoBehaviour:
     InvenSlots:
     - itemTypes: 
       item:
-        item_id: 3
+        item_id: -1
         item_name: 
         ability: []
       itemCnt: 0
-    - itemTypes: 
-      item:
-        item_id: 3
-        item_name: 
-        ability: []
-      itemCnt: -2
     - itemTypes: 00000000
       item:
-        item_id: 1
+        item_id: -1
         item_name: 
         ability: []
-      itemCnt: 2
-    - itemTypes: 
+      itemCnt: 0
+    - itemTypes: 0000000000000000
       item:
-        item_id: 2
+        item_id: -1
         item_name: 
         ability: []
-      itemCnt: 3
+      itemCnt: 4
+    - itemTypes: 000000000000000000000000
+      item:
+        item_id: -1
+        item_name: 
+        ability: []
+      itemCnt: 4
