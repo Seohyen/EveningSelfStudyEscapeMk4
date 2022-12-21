@@ -84,7 +84,6 @@ public class ItemAddUse : MonoBehaviour
             }
         }
 
-        Debug.Log("asd");
     }
 
 
