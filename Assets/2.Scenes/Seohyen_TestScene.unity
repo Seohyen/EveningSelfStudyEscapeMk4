@@ -1899,6 +1899,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   nowItem: {fileID: 0}
+  bloodImage: {fileID: 0}
 --- !u!143 &1564427346
 CharacterController:
   m_ObjectHideFlags: 0
