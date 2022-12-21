@@ -17,6 +17,7 @@ public class DoorScript : MonoBehaviour
         {
             Debug.Log("Open!");
             animator.SetBool("IsOpen", true);
+            SoundManager.instance.DoorSoundPlay();
         }
     }
 
