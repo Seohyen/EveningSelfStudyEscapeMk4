@@ -17,7 +17,7 @@ public class EscapeDoorScript : MonoBehaviour
     {
         if (key_equip.isKey == true)
         {
-            if (other.tag == "Player")
+            if (other.gameObject.CompareTag("Player"))
             {
                 Debug.Log("Open!");
                 animator.SetBool("IsOpen", true);
