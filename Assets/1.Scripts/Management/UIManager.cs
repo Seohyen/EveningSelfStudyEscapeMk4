@@ -5,8 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private string sceneName; 
-
+    private string sceneName;
 
     public void OnClickMoveScene()
     {
