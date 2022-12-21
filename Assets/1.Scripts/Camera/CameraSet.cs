@@ -28,9 +28,7 @@ public class CameraSet : MonoBehaviour
 
     public Transform posfirstCameraTarget = null;
 
-    public float shakeTime = 1;
-    public float shakeSpeed = 2;
-    public float shakeAmount = 1;
+ 
     private Transform cam;
 
     void Start()
@@ -48,21 +46,7 @@ public class CameraSet : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    public IEnumerator Shake()
-    {
-        Vector3 originPosition = cam.localPosition;
-        float elapsedTime = 0;
-        while (elapsedTime < shakeTime)
-        {
-            Vector3 randomPoint = originPosition + Random.insideUnitSphere * shakeAmount;
-            cam.localPosition = Vector3.Lerp(cam.localPosition, randomPoint, Time.deltaTime * shakeSpeed);
-
-            yield return null;
-
-            elapsedTime += Time.deltaTime;
-        }
-        cam.localPosition = originPosition;
-    }
+   
     void FirstCamera()
     {
         float mouseX = Input.GetAxis("Mouse X");
@@ -99,11 +83,5 @@ public class CameraSet : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Q))
-        {
-            StartCoroutine(Shake());
-        }
-    }
+   
 }
