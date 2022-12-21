@@ -289,7 +289,7 @@ public class Player : MonoBehaviour
                 sapceEvent.value = 0.05f;
                 spd = 3;
                 StopCoroutine(BloodScreen());
-
+                bloodImage.color = new Color(1, 0, 0, 0);
             }
         }
     }
