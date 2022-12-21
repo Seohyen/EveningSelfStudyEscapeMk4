@@ -1225,7 +1225,7 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 1636228493428836239}
---- !u!114 &563672097681960460
+--- !u!114 &433017833236531143
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: dfbaa6e6e7fd1c34387bd6f5e90cca1a, type: 3}
+  m_Clip: {fileID: 8300000, guid: 107ceb8eb3bc5e540841b66e8cc87fda, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
@@ -1748,10 +1748,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 9.95
+    m_Start: 9.843817339589199
     m_ClipIn: 0
-    m_Asset: {fileID: 563672097681960460}
-    m_Duration: 5.833333333333334
+    m_Asset: {fileID: 433017833236531143}
+    m_Duration: 5.939515993744134
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6631834770393530319}
     m_EaseInDuration: 0
@@ -1760,25 +1760,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1815,7 +1797,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: MP_Walking Away
+    m_DisplayName: walking
   m_Markers:
     m_Objects: []
   m_TrackProperties:
