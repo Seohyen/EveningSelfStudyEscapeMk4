@@ -51,7 +51,6 @@ public class ItemAddUse : MonoBehaviour
             Item newItem = inventoryObj.invenSlots[value].item;
 
             inventoryObj.UseItem(newItem, 1);
-            ItemPickup.instance.Debuglog();
             if (inventoryObj.invenSlots[value].itemCnt <= 0)
             {
                 inventoryObj.invenSlots[value].slotUI.transform.GetChild(value).GetComponent<Image>().sprite = null;
