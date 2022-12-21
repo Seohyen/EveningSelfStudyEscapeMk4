@@ -44,11 +44,6 @@ public class CameraSet : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> main
     void FirstCamera()
     {
         float mouseX = Input.GetAxis("Mouse X");
@@ -76,19 +71,6 @@ public class CameraSet : MonoBehaviour
         {
             objTargetTransform = objTarget.transform;
         }
-<<<<<<< HEAD
         FirstCamera();
     }
-=======
-
-        switch (cameraTypeState)
-        {
-            case CameraTypeState.First:
-                FirstCamera();
-                break;
-        }
-    }
-
-   
->>>>>>> main
 }
