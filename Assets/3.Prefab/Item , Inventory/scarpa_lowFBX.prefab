@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2850835361291631889}
   - component: {fileID: 8407299952453288424}
   - component: {fileID: 4499896172239159692}
+  - component: {fileID: 8992752643706130797}
   m_Layer: 9
   m_Name: scarpa_lowFBX
   m_TagString: Item
@@ -97,3 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: c8e1e4d7296c930448175275f413aa9d, type: 2}
+--- !u!65 &8992752643706130797
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2283749257372494493}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0612383, y: 1.6065071, z: 2.5475445}
+  m_Center: {x: -0.026594877, y: 0.7995925, z: 0.015431583}

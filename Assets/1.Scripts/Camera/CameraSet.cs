@@ -25,9 +25,7 @@ public class CameraSet : MonoBehaviour
 
     public Transform posfirstCameraTarget = null;
 
-    public float shakeTime = 1;
-    public float shakeSpeed = 2;
-    public float shakeAmount = 1;
+ 
     private Transform cam;
 
     void Start()
@@ -46,7 +44,11 @@ public class CameraSet : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> main
     void FirstCamera()
     {
         float mouseX = Input.GetAxis("Mouse X");
@@ -74,6 +76,19 @@ public class CameraSet : MonoBehaviour
         {
             objTargetTransform = objTarget.transform;
         }
+<<<<<<< HEAD
         FirstCamera();
     }
+=======
+
+        switch (cameraTypeState)
+        {
+            case CameraTypeState.First:
+                FirstCamera();
+                break;
+        }
+    }
+
+   
+>>>>>>> main
 }
