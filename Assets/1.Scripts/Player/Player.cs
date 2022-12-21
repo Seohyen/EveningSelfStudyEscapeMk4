@@ -194,7 +194,6 @@ public class Player : MonoBehaviour
 
         if (col.gameObject.CompareTag("Teacher"))
         {
-            Debug.LogWarning("d");
             isHolding = true;
             sapceEvent.gameObject.SetActive(true);
             spaceT.gameObject.SetActive(true);
@@ -205,6 +204,7 @@ public class Player : MonoBehaviour
 
     private void UseItem()
     {
+        Debug.LogWarning(spd);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ItemAddUse.Instace.Clear(0);
@@ -229,24 +229,24 @@ public class Player : MonoBehaviour
         }
         if (ItemAddUse.Instace.isItem2 == true)
         {
-            Invoke("Itemfalse2", 5f);
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                Invoke("Itemfalse2", 5f);
                 spd = 9;
-
+                
             }
         }
 
         if (ItemAddUse.Instace.isItem3 == true)
         {
-            Invoke("Itemfalse3", 5);
+            Invoke("Itemfalse3", 5f);
             spd = 6;
 
         }
 
         if (ItemAddUse.Instace.isItem4 == true)
         {
-            Invoke("Itemfalse4", 5);
+            Invoke("Itemfalse4", 5f);
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 spd = 9;
@@ -259,7 +259,6 @@ public class Player : MonoBehaviour
 
     private void Itemfalse2()
     {
-        Debug.LogWarning("ww");
         ItemAddUse.Instace.isItem2 = false;
     }
     private void Itemfalse3()
@@ -275,7 +274,6 @@ public class Player : MonoBehaviour
 
     private void SpaceEvent()
     {
-        Debug.LogWarning(isHolding);
         if (isHolding == true)
         {
             sapceEvent.value -= 0.0003f;

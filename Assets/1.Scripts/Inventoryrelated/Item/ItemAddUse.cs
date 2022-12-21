@@ -50,25 +50,22 @@ public class ItemAddUse : MonoBehaviour
 
             Item newItem = inventoryObj.invenSlots[value].item;
 
-
+            
             if (inventoryObj.invenSlots[value].item.item_id == 0)
             {
-                Debug.Log("1");
                 isItem1 = true;
             }
-            if (inventoryObj.invenSlots[value].item.item_id == 1)
+            else if (inventoryObj.invenSlots[value].item.item_id == 1)
             {
-                Debug.Log("2");
+                Debug.LogWarning("1");
                 isItem2 = true;
             }
-            if (inventoryObj.invenSlots[value].item.item_id == 2)
+            else if (inventoryObj.invenSlots[value].item.item_id == 2)
             {
-                Debug.Log("3");
                 isItem3 = true;
             }
-            if (inventoryObj.invenSlots[value].item.item_id == 3)
+            else if (inventoryObj.invenSlots[value].item.item_id == 3)
             {
-                Debug.Log("4");
                 isItem4 = true;
             }
 
