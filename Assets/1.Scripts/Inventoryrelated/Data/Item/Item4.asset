@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item4
   m_EditorClassIdentifier: 
   itemType: 0
-  getFlagStackable: 0
+  getFlagStackable: 1
   itemIcon: {fileID: 21300000, guid: 16b9b8a207a1d5647be03d86904e27ec, type: 3}
   objModelPrefab: {fileID: 100000, guid: a7dfc8f0b06a1f64a889c6c9e36e23d5, type: 3}
   itemData:
