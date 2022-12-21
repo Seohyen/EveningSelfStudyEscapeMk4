@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemObjs:
   - {fileID: 11400000, guid: 759e580e1b2a1ab4f9b3982aa6d5d653, type: 2}
+<<<<<<< HEAD
   - {fileID: 11400000, guid: 89d5c0b214d228043bd8bdbfb705ba4f, type: 2}
+=======
+  - {fileID: 11400000, guid: c8e1e4d7296c930448175275f413aa9d, type: 2}
+  - {fileID: 11400000, guid: ae9f5021d7193b748bb30d0dc9f7dc6a, type: 2}
+  - {fileID: 11400000, guid: 0156ff2fd16093541ab9c31b80d7de58, type: 2}
+>>>>>>> YuJeongBin
