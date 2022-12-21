@@ -10,7 +10,7 @@ public class EscapeDoorScript : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        key_equip = GetComponent<Key_Equip>();
+        key_equip = FindObjectOfType<Key_Equip>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +19,6 @@ public class EscapeDoorScript : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Open!");
                 animator.SetBool("IsOpen", true);
                 SoundManager.instance.DoorSoundPlay();
             }
@@ -28,7 +27,6 @@ public class EscapeDoorScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit!");
         if (other.tag == "Player")
         {
             animator.SetBool("IsOpen", false);
