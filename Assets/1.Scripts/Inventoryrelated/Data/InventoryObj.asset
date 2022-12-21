@@ -21,22 +21,22 @@ MonoBehaviour:
         item_id: -1
         item_name: 
         ability: []
-      itemCnt: 0
+      itemCnt: -4
+    - itemTypes: 
+      item:
+        item_id: -1
+        item_name: 
+        ability: []
+      itemCnt: -1
     - itemTypes: 00000000
       item:
         item_id: -1
         item_name: 
         ability: []
       itemCnt: 0
-    - itemTypes: 0000000000000000
-      item:
-        item_id: -1
-        item_name: 
-        ability: []
-      itemCnt: 4
     - itemTypes: 000000000000000000000000
       item:
         item_id: -1
         item_name: 
         ability: []
-      itemCnt: 4
+      itemCnt: 0

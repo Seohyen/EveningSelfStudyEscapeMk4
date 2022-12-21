@@ -58,7 +58,7 @@ public class InventoryObj : ScriptableObject
         }
         else
         {
-            invenSlot.addCnt(amount);
+            invenSlot.addCnt(amount-1);
         }
 
         return true;

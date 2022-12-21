@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
 
     public Text rayText;
 
-    
+
 
     RaycastHit hit;
     public bool isItem = false;
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
 
     private bool isHolding = false;
 
-   
+
     void Start()
     {
         sapceEvent.gameObject.SetActive(false);
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         SpaceEvent();
         UseItem();
         Sound();
-       
+
     }
 
     void Move()
@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
             float vertical = Input.GetAxis("Vertical");
             float horizontal = Input.GetAxis("Horizontal");
 
-            
+
 
             Vector3 targetDirection = horizontal * right + vertical * forward;
             vecMoveDirection = Vector3.RotateTowards(vecMoveDirection, targetDirection, rotateMoveSpd * Mathf.Deg2Rad * Time.deltaTime, 1000.0f);
@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
             Vector3 moveAmount = (vecMoveDirection * walkSpd * Time.deltaTime);
             collisionFlagsCharacter = controllerCharacter.Move(moveAmount);
 
-            
+
 
             if (controllerCharacter.isGrounded == false)
             {
@@ -182,18 +182,19 @@ public class Player : MonoBehaviour
                 isItem = false;
             }
 
-            
+
 
         }
     }
 
-    
+
 
     private void OnTriggerEnter(Collider col)
     {
 
         if (col.gameObject.CompareTag("Teacher"))
         {
+            Debug.LogWarning("d");
             isHolding = true;
             sapceEvent.gameObject.SetActive(true);
             spaceT.gameObject.SetActive(true);
@@ -204,19 +205,19 @@ public class Player : MonoBehaviour
 
     private void UseItem()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-        ItemAddUse.Instace.Clear(0);
+            ItemAddUse.Instace.Clear(0);
         }
-        if(Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             ItemAddUse.Instace.Clear(1);
         }
-        if(Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             ItemAddUse.Instace.Clear(2);
         }
-        if(Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             ItemAddUse.Instace.Clear(3);
         }
@@ -228,23 +229,24 @@ public class Player : MonoBehaviour
         }
         if (ItemAddUse.Instace.isItem2 == true)
         {
-          if(Input.GetKey(KeyCode.LeftShift))
+            Invoke("Itemfalse2", 5f);
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                spd = 9; 
+                spd = 9;
 
             }
-            Invoke("Itemfalse", 5f);
         }
 
-        if(ItemAddUse.Instace.isItem3 == true)
+        if (ItemAddUse.Instace.isItem3 == true)
         {
+            Invoke("Itemfalse3", 5);
             spd = 6;
 
-            Invoke("Itemfalse", 5);
         }
 
-        if(ItemAddUse.Instace.isItem4 == true)
+        if (ItemAddUse.Instace.isItem4 == true)
         {
+            Invoke("Itemfalse4", 5);
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 spd = 9;
@@ -252,18 +254,28 @@ public class Player : MonoBehaviour
             }
             spd = 6;
 
-            Invoke("Itemfalse", 5);
         }
     }
 
-    private void Itemfalse()
+    private void Itemfalse2()
     {
+        Debug.LogWarning("ww");
         ItemAddUse.Instace.isItem2 = false;
     }
+    private void Itemfalse3()
+    {
+        ItemAddUse.Instace.isItem3 = false;
+    }
+    private void Itemfalse4()
+    {
+        ItemAddUse.Instace.isItem4 = false;
+    }
 
-    
+
+
     private void SpaceEvent()
     {
+        Debug.LogWarning(isHolding);
         if (isHolding == true)
         {
             sapceEvent.value -= 0.0003f;
@@ -313,7 +325,7 @@ public class Player : MonoBehaviour
                 spd = 3;
             }
         }
-        
+
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             mainCamera.fieldOfView += 13;
@@ -330,11 +342,11 @@ public class Player : MonoBehaviour
 
     private void Sound()
     {
-        if (Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
             SoundManager.instance.WalkSoundPlay();
         }
-        if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
             SoundManager.instance.WalkSoundStop();
         }
@@ -344,10 +356,10 @@ public class Player : MonoBehaviour
     IEnumerator BloodScreen()
     {
         bloodImage.color = new Color(1, 0, 0, Random.Range(0.2f, 0.3f));
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(4);
     }
-        
-    }
+
+}
 
 
 
