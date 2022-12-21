@@ -8,7 +8,6 @@ public class SceneCh : MonoBehaviour
     private string Sname;
     private void Update()
     {
-        Debug.Log("d");
         SceneM.instance.ChangeScene(Sname);
 
         

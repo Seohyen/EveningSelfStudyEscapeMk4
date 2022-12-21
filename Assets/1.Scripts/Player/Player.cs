@@ -223,28 +223,30 @@ public class Player : MonoBehaviour
 
         if (ItemAddUse.Instace.isItem1 == true)
         {
+            Debug.Log("Use");
             stamina = 5;
             ItemAddUse.Instace.isItem1 = false;
         }
         if (ItemAddUse.Instace.isItem2 == true)
         {
+            Invoke("Itemfalse2", 5f);
           if(Input.GetKey(KeyCode.LeftShift))
             {
                 spd = 9; 
 
             }
-            Invoke("Itemfalse", 5f);
         }
 
         if(ItemAddUse.Instace.isItem3 == true)
         {
+            Invoke("Itemfalse3", 5);
             spd = 6;
 
-            Invoke("Itemfalse", 5);
         }
 
         if(ItemAddUse.Instace.isItem4 == true)
         {
+            Invoke("Itemfalse4", 5);
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 spd = 9;
@@ -252,14 +254,22 @@ public class Player : MonoBehaviour
             }
             spd = 6;
 
-            Invoke("Itemfalse", 5);
         }
     }
 
-    private void Itemfalse()
+    private void Itemfalse2()
     {
         ItemAddUse.Instace.isItem2 = false;
+    } 
+    private void Itemfalse3()
+    {
+        ItemAddUse.Instace.isItem3 = false;
     }
+      private void Itemfalse4()
+    {
+        ItemAddUse.Instace.isItem4 = false;
+    }
+    
 
     
     private void SpaceEvent()

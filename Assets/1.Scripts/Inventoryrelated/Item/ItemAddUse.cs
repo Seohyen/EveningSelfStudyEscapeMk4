@@ -37,7 +37,7 @@ public class ItemAddUse : MonoBehaviour
         }
     }
 
-    public bool isItem1 =false;
+    public bool isItem1 = false;
     public bool isItem2 = false;
     public bool isItem3 = false;
     public bool isItem4 = false;
@@ -50,41 +50,48 @@ public class ItemAddUse : MonoBehaviour
 
             Item newItem = inventoryObj.invenSlots[value].item;
 
+
+            if (inventoryObj.invenSlots[value].item.item_id == 0)
+            {
+                Debug.Log("1");
+                isItem1 = true;
+            }
+            if (inventoryObj.invenSlots[value].item.item_id == 1)
+            {
+                Debug.Log("2");
+                isItem2 = true;
+            }
+            if (inventoryObj.invenSlots[value].item.item_id == 2)
+            {
+                Debug.Log("3");
+                isItem3 = true;
+            }
+            if (inventoryObj.invenSlots[value].item.item_id == 3)
+            {
+                Debug.Log("4");
+                isItem4 = true;
+            }
+
             inventoryObj.UseItem(newItem, 1);
+           
+          
+
+           
+            
             if (inventoryObj.invenSlots[value].itemCnt <= 0)
             {
                 inventoryObj.invenSlots[value].slotUI.transform.GetChild(value).GetComponent<Image>().sprite = null;
             }
         }
-        if (inventoryObj.invenSlots[value].itemCnt == 0)
-        {
-            return;
-        }
 
-        if(inventoryObj.invenSlots[value].item.item_id == 0)
-        {
-            isItem1 = true;
-        }
-        if(inventoryObj.invenSlots[value].item.item_id == 1)
-        {
-            isItem2 = true;
-        }
-        if(inventoryObj.invenSlots[value].item.item_id == 2)
-        {
-            isItem3 = true;
-        }
-        if(inventoryObj.invenSlots[value].item.item_id == 3)
-        {
-            isItem4 = true;
-        }
-
+        Debug.Log("asd");
     }
 
-   
+
 
 }
 
-    
+
 
 
 
