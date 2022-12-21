@@ -44,6 +44,9 @@ public class CameraSet : MonoBehaviour
         {
             objTargetTransform = objTarget.transform;
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     public IEnumerator Shake()
     {
