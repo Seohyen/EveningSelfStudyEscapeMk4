@@ -15,7 +15,6 @@ public class DoorScript : MonoBehaviour
     {
         if (other.tag == "Player" || other.tag == "Teacher")
         {
-            Debug.Log("Open!");
             animator.SetBool("IsOpen", true);
             SoundManager.instance.DoorSoundPlay();
         }
@@ -23,7 +22,6 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit!");
         if (other.tag == "Player" || other.tag == "Teacher")
         {
             animator.SetBool("IsOpen", false);

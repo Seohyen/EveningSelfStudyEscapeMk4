@@ -6,13 +6,26 @@ public class Key_Equip : MonoBehaviour
 {
     public bool isKey;
 
+    private bool isCheck;
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Key Equip");
-        if (gameObject.CompareTag("Key"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKey(KeyCode.F))
+            Debug.Log("Player!");
+            isCheck = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (isCheck == true)
+        {
+            Debug.Log("isCheck!");
+            if (Input.GetKeyDown(KeyCode.F))
             {
+                Debug.Log("Press F");
                 Destroy(gameObject);
                 isKey = true;
             }

@@ -37,6 +37,7 @@ public class SettingUI : MonoBehaviour
         isEsc = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Debug.Log("Resum");
     }
     
     public void OnClickExit()
