@@ -5,21 +5,23 @@ using UnityEngine;
 public class EscapeDoorScript : MonoBehaviour
 {
     Animator animator;
-    public bool Item = false;
+    private RandomKey randomKey;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        randomKey = GetComponent<RandomKey>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Item == true)
+        if (randomKey.isKey == true)
         {
-            if (other.tag == "Player" || other.tag == "Teacher")
+            if (other.tag == "Player")
             {
                 Debug.Log("Open!");
                 animator.SetBool("IsOpen", true);
+                SoundManager.instance.DoorSoundPlay();
             }
         }
     }
@@ -27,9 +29,10 @@ public class EscapeDoorScript : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Exit!");
-        if (other.tag == "Player" || other.tag == "Teacher")
+        if (other.tag == "Player")
         {
             animator.SetBool("IsOpen", false);
+            SoundManager.instance.DoorSoundPlay();
         }
     }
 }

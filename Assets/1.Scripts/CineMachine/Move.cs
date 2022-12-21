@@ -9,8 +9,6 @@ public class Move : MonoBehaviour
 
     Rigidbody rb;
     Animator anim;
-
-    bool isWalk = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
