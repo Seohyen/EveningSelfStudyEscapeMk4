@@ -62,6 +62,7 @@ public class CameraSet : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0) return;
         if (objTarget == null)
         {
             return;
