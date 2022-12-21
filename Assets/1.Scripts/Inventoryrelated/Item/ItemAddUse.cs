@@ -37,6 +37,10 @@ public class ItemAddUse : MonoBehaviour
         }
     }
 
+    public bool isItem1 =false;
+    public bool isItem2 = false;
+    public bool isItem3 = false;
+    public bool isItem4 = false;
 
     public void Clear(int value)
     {
@@ -58,9 +62,26 @@ public class ItemAddUse : MonoBehaviour
             return;
         }
 
+        if(inventoryObj.invenSlots[value].item.item_id == 0)
+        {
+            isItem1 = true;
+        }
+        if(inventoryObj.invenSlots[value].item.item_id == 1)
+        {
+            isItem2 = true;
+        }
+        if(inventoryObj.invenSlots[value].item.item_id == 2)
+        {
+            isItem3 = true;
+        }
+        if(inventoryObj.invenSlots[value].item.item_id == 3)
+        {
+            isItem4 = true;
+        }
+
     }
 
-
+   
 
 }
 
