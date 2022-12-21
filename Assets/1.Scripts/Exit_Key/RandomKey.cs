@@ -6,8 +6,7 @@ public class RandomKey : MonoBehaviour
 {
     public Transform[] posRandomKey;
     public GameObject Key;
-    public bool isKey;
-
+    
     private void Awake()
     {
         RandomKeyProduce();
@@ -19,7 +18,5 @@ public class RandomKey : MonoBehaviour
 
         var key = Instantiate(Key);
         key.transform.position = posRandomKey[randomKeyPos].position;
-
-        isKey = true;
     }
 }

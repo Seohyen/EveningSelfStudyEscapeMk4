@@ -5,17 +5,17 @@ using UnityEngine;
 public class EscapeDoorScript : MonoBehaviour
 {
     Animator animator;
-    private RandomKey randomKey;
+    private Key_Equip key_equip;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        randomKey = GetComponent<RandomKey>();
+        key_equip = GetComponent<Key_Equip>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (randomKey.isKey == true)
+        if (key_equip.isKey == true)
         {
             if (other.tag == "Player")
             {

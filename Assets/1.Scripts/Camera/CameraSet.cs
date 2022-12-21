@@ -12,12 +12,9 @@ public class CameraSet : MonoBehaviour
 
     private Transform objTargetTransform = null;
 
+    SettingUI settingUI;
+
     Vector3 originPos;
-    public enum CameraTypeState { First, Third }
-
-    public CameraTypeState cameraTypeState = CameraTypeState.Third;
-
-
 
     [Header("1ÀÎÄª Ä«¸Þ¶ó")]
     public float detailX = 3.0f;
@@ -38,6 +35,7 @@ public class CameraSet : MonoBehaviour
         originPos = transform.localPosition;
 
         cameraTransform = GetComponent<Transform>();
+        settingUI = GetComponent<SettingUI>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
         if (objTarget != null)
@@ -48,21 +46,7 @@ public class CameraSet : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    public IEnumerator Shake()
-    {
-        Vector3 originPosition = cam.localPosition;
-        float elapsedTime = 0;
-        while (elapsedTime < shakeTime)
-        {
-            Vector3 randomPoint = originPosition + Random.insideUnitSphere * shakeAmount;
-            cam.localPosition = Vector3.Lerp(cam.localPosition, randomPoint, Time.deltaTime * shakeSpeed);
 
-            yield return null;
-
-            elapsedTime += Time.deltaTime;
-        }
-        cam.localPosition = originPosition;
-    }
     void FirstCamera()
     {
         float mouseX = Input.GetAxis("Mouse X");
@@ -78,9 +62,9 @@ public class CameraSet : MonoBehaviour
 
         cameraTransform.position = posfirstCameraTarget.position;
     }
-    private void LateUpdate()
-    {
 
+    private void Update()
+    {
         if (objTarget == null)
         {
             return;
@@ -90,20 +74,6 @@ public class CameraSet : MonoBehaviour
         {
             objTargetTransform = objTarget.transform;
         }
-
-        switch (cameraTypeState)
-        {
-            case CameraTypeState.First:
-                FirstCamera();
-                break;
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Q))
-        {
-            StartCoroutine(Shake());
-        }
+        FirstCamera();
     }
 }

@@ -8,6 +8,8 @@ public class SettingUI : MonoBehaviour
 
     [SerializeField]
     private GameObject panel;
+
+    public bool isEsc = false;
    
     void Start()
     {
@@ -20,13 +22,21 @@ public class SettingUI : MonoBehaviour
        {
             Time.timeScale = 0;
             panel.SetActive(true);
-       }
+
+            isEsc = true;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void OnClickResum()
     {
         panel.SetActive(false);
-        Time.timeScale = 1; 
+        Time.timeScale = 1;
+        isEsc = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     
     public void OnClickExit()
