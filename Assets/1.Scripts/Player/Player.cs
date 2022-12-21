@@ -220,9 +220,48 @@ public class Player : MonoBehaviour
         {
             ItemAddUse.Instace.Clear(3);
         }
-        
+
+        if (ItemAddUse.Instace.isItem1 == true)
+        {
+            stamina = 5;
+            ItemAddUse.Instace.isItem1 = false;
+        }
+        if (ItemAddUse.Instace.isItem2 == true)
+        {
+          if(Input.GetKey(KeyCode.LeftShift))
+            {
+                spd = 9; 
+
+            }
+            Invoke("Itemfalse", 5f);
+        }
+
+        if(ItemAddUse.Instace.isItem3 == true)
+        {
+            spd = 6;
+
+            Invoke("Itemfalse", 5);
+        }
+
+        if(ItemAddUse.Instace.isItem4 == true)
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                spd = 9;
+
+            }
+            spd = 6;
+
+            Invoke("Itemfalse", 5);
+        }
     }
 
+    private void Itemfalse()
+    {
+        ItemAddUse.Instace.isItem2 = false;
+    }
+
+    
     private void SpaceEvent()
     {
         if (isHolding == true)
