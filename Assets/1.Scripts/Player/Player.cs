@@ -198,6 +198,7 @@ public class Player : MonoBehaviour
             isHolding = true;
             sapceEvent.gameObject.SetActive(true);
             spaceT.gameObject.SetActive(true);
+            StartCoroutine(BloodScreen());
         }
 
     }
@@ -287,6 +288,7 @@ public class Player : MonoBehaviour
             {
                 sapceEvent.value = 0.05f;
                 spd = 3;
+                StopCoroutine(BloodScreen());
 
             }
         }
@@ -338,7 +340,13 @@ public class Player : MonoBehaviour
             SoundManager.instance.WalkSoundStop();
         }
     }
-     
+
+    public Image bloodImage;
+    IEnumerator BloodScreen()
+    {
+        bloodImage.color = new Color(1, 0, 0, Random.Range(0.2f, 0.3f));
+        yield return new WaitForSeconds(0.1f);
+    }
         
     }
 
