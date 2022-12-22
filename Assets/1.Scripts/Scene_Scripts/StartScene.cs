@@ -13,6 +13,13 @@ public class StartScene : MonoBehaviour
     private GameObject tutorial_Penel;
     [SerializeField]
     private GameObject exit_Button;
+    [SerializeField]
+    private GameObject quit_Button;
+
+    public void OnClickQuitButton()
+    {
+        Application.Quit();
+    }
 
     public void OnClickTutorialButton()
     {
